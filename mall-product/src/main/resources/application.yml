@@ -8,3 +8,5 @@ spring:
     url: jdbc:mysql://8.141.60.249:3306/mall-product?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: root
+#  profiles:
+#    active: dev
