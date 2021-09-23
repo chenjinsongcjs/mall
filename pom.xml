@@ -17,17 +17,19 @@
     <packaging>pom</packaging>
     <!--    统一管理jar包-->
     <properties>
+        <druid.version>1.1.17</druid.version>
+        <lombok.version>1.18.4</lombok.version>
+        <swagger.version>2.9.2</swagger.version>
+        <httpcore.version>4.4.14</httpcore.version>
+        <servlet.api.version>2.5</servlet.api.version>
+        <commons.lang.version>2.6</commons.lang.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <mybatis-plus.version>3.3.1</mybatis-plus.version>
-        <lombok.version>1.18.4</lombok.version>
-        <commons.lang.version>2.6</commons.lang.version>
-        <httpcore.version>4.4.14</httpcore.version>
-        <servlet.api.version>2.5</servlet.api.version>
-        <mysql.connector.version>8.0.17</mysql.connector.version>
-        <validation-api.version>2.0.1.Final</validation-api.version>
         <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
+        <mysql.connector.version>8.0.17</mysql.connector.version>
         <spring.cloud.version>Hoxton.RELEASE</spring.cloud.version>
+        <validation-api.version>2.0.1.Final</validation-api.version>
         <spring.cloud.alibaba.version>2.2.0.RELEASE</spring.cloud.alibaba.version>
     </properties>
     <dependencyManagement>
@@ -92,6 +94,22 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.connector.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!--Swagger-UI API文档生产工具-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
